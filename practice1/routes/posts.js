@@ -26,9 +26,32 @@ router.post('/',  async (req,res)=>{
     }
 
 })
-router.get('/:postId',(req,res)=>{
-    console.log(req.params.postId);
+router.get('/:postId',async (req,res)=>{
+    try{
+        const post = await Post.findById(req.params.postId)
+        res.json(post);
+    } catch(err){
+        res.json({message : err});
+    }
 })
-
+router.delete('/:postId', async (req,res)=>{
+    try{
+        const removedPost = await Post.remove({_id: req.params.postId});
+        res.json(removedPost)
+    } catch(err){
+        res.json({message : err});
+    }
+})
+router.patch('/:postId', async (req,res)=>{
+    try{
+        const patchedPost = await Post.updateOne(
+            {_id: req.params.postId},
+            {$set:{title:req.body.title, description: req.body.description}}
+            )
+            res.json(patchedPost);
+    } catch(err){
+        res.json({message: err});
+    }
+})
 
 module.exports = router;
