@@ -1,1 +1,4 @@
-# node.js2
+# Some codes
+
+npm install mongoose
+npm install dotenv
