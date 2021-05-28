@@ -2,8 +2,11 @@ const express = require('express');
 const PORT = process.env.PORT || 3000;
 const app = express();
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 require('dotenv/config');
 
+
+app.use(bodyParser.json());
 //Import Routes
 const postsRoute = require('./routes/posts');
 
@@ -23,4 +26,4 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedT
 
 
 
-app.listen(3000);
+app.listen(PORT);

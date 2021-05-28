@@ -1,4 +1,11 @@
 # Some codes
 
-npm install mongoose
-npm install dotenv
+- npm install mongoose
+- npm install dotenv       // require('dotenv/config')
+- npm install body-parser => `app.use(bodyParser.json());` // req.body cannot be read directly we need parse.
+```
+router.get('/:postId', (req,res) =>{
+    console.log(req.params.postId);
+})
+'/:postId' => https://google.com/posts/This is where shows postId;
+```
