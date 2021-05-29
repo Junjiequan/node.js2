@@ -1,3 +1,5 @@
+This repo is for practice only. just ignore this repo unless you wanna look at the codes
+
 # Some codes
 
 - npm install mongoose
