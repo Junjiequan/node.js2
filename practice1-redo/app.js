@@ -26,4 +26,4 @@ mongoose.connect(process.env.DB_KEY, { useNewUrlParser: true, useUnifiedTopology
         console.log('mongoDB is connected');
     })
 
-app.listen(PORT);
+app.listen(PORT || 'https://a331998513.github.io/node.js2/practice1-redo');
