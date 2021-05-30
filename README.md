@@ -2,6 +2,26 @@ This repo is for practice only. just ignore this repo unless you wanna look at t
 
 # Deploy node.js application on AWS with github [tutorial](https://sumantmishra.medium.com/how-to-deploy-node-js-app-on-aws-with-github-db99758294f1)
 
+# Post and Get data from json file from server with javascript [Using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+```
+async function postData (url='', data={}){
+    const options = {
+        method: "POST",
+        headers: {
+            'content-type': 'application/json'
+        }
+        referrerPolicy: 'no-referrer',
+        body: JSON.Stringify(data),
+    }
+    const response = await fetch(url, options);
+    return response.json();                     // parses JSON response into native JavaScript objects
+ }
+ postData('https://www.jaysss.site/forum/',{ title: 'new post', description: 'some random text here'})
+    .then(data=>{
+        console.log('success',data)
+    }
+```
+
 # Some codes
 
 - npm install mongoose
