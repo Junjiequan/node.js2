@@ -1,5 +1,12 @@
 This repo is for practice only. just ignore this repo unless you wanna look at the codes
 
+# Some method
+- post -> post.save()       // save datas to local then use res.json() to upload on server
+- get -> post.findById()   // select specific data with params
+- patch -> post.updateOne()  // change data with {_id:req.params.Id}, {$set:{title:req.body.title ,etc.}}
+- delete -> post.remove()     //delete data with {_id:req.params.Id}
+
+
 # Deploy node.js application on AWS with github [tutorial](https://sumantmishra.medium.com/how-to-deploy-node-js-app-on-aws-with-github-db99758294f1)
 
 # Post and Get data from REST API with javascript [Using fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
@@ -23,7 +30,7 @@ async function postData (url='', data={}){
     }
 ```
 
-# Some codes
+# some initial settings
 
 - npm install mongoose
 - npm install dotenv       // require('dotenv').config();
