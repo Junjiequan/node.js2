@@ -27,8 +27,7 @@ async function postData (url='', data={}){
 
 - npm install mongoose
 - npm install dotenv       // require('dotenv').config();
-- npm install body-parser => `app.use(bodyParser.json());` // req.body cannot be read directly we need parse.
-```
+- app.use(express.json());            // same as body-parser
 router.get('/:postId', (req,res) =>{
     console.log(req.params.postId);
 })
